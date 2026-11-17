@@ -1,0 +1,189 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f5f1;
+    color: #292a25;
+}
+
+.conteneur-page {
+    width: min(820px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0 28px;
+}
+
+
+.introduction {
+    margin-bottom: 28px;
+}
+
+
+.surtitre {
+    margin: 0 0 8px;
+    color: #68704e;
+    font-size: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 42px);
+    line-height: 1.15;
+}
+
+
+.sous-titre {
+    margin: 10px 0 0;
+    color: #66675f;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.liste-series {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.carte-serie {
+    display: grid;
+    grid-template-columns: 32px 84px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid #e3e1d9;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.rang {
+    color: #68704e;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.affiche {
+    display: block;
+    width: 84px;
+    height: 108px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.infos-serie {
+    min-width: 0;
+}
+
+.carte-serie h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.carte-serie h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.carte-serie h2 a:hover,
+.carte-serie h2 a:focus-visible {
+    text-decoration: underline;
+}
+
+.carte-serie p {
+    margin: 0;
+    color: #55564f;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.lien-retour {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #596342;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.lien-retour:hover,
+.lien-retour:focus-visible {
+    text-decoration: underline;
+}
+
+.liste-notes {
+    display: grid;
+    gap: 12px;
+}
+
+.carte-note {
+    display: grid;
+    grid-template-columns: 84px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid #e3e1d9;
+    border-radius: 8px;
+    background: #fff;
+    scroll-margin-top: 20px;
+}
+
+.carte-note h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.carte-note p {
+    margin: 0;
+    color: #55564f;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.carte-note .note {
+    margin-top: 8px;
+    color: #4b17f6;
+    font-weight: 700;
+}
+
+footer {
+    padding-top: 24px;
+    color: #66675f;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    .conteneur-page {
+        padding-top: 32px;
+    }
+
+    .carte-serie {
+        grid-template-columns: 24px 68px minmax(0, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .affiche {
+        width: 68px;
+        height: 92px;
+    }
+
+    .carte-serie h2 {
+        font-size: 18px;
+    }
+
+    .carte-note {
+        grid-template-columns: 68px minmax(0, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .carte-note h2 {
+        font-size: 18px;
+    }
+}
